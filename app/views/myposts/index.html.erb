@@ -1,0 +1,24 @@
+<h1>Listing myposts</h1>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Comment</th>
+    <th>Post date</th>
+  </tr>
+
+<% @myposts.each do |mypost| %>
+  <tr>
+    <td><%=h mypost.title %></td>
+    <td><%=h mypost.comment %></td>
+    <td><%=h mypost.post_date %></td>
+    <td><%= link_to 'Show', mypost %></td>
+    <td><%= link_to 'Edit', edit_mypost_path(mypost) %></td>
+    <td><%= link_to 'Destroy', mypost, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New mypost', new_mypost_path %>

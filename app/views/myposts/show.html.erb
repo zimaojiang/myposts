@@ -1,0 +1,18 @@
+<p>
+  <b>Title:</b>
+  <%=h @mypost.title %>
+</p>
+
+<p>
+  <b>Comment:</b>
+  <%=h @mypost.comment %>
+</p>
+
+<p>
+  <b>Post date:</b>
+  <%=h @mypost.post_date %>
+</p>
+
+
+<%= link_to 'Edit', edit_mypost_path(@mypost) %> |
+<%= link_to 'Back', myposts_path %>
